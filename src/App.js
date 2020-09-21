@@ -12,11 +12,13 @@ import {
 } from "react-router-dom";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function App() {
-  library.add( faBars)
+  library.add( fab,faBars)
   return (
     <Router>
       <Header />
@@ -28,6 +30,9 @@ function App() {
             <Route exact path="/Nosotros" component={Nosotros} />
             <Route exact path="/Nosotros/Contacto" component={Contacto} />
           </Switch>
+        </div>
+        <div className="container flex justify-center text-white mt-5">
+          <p>Sigueme en <a href="https://github.com/misanc21" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={['fab', 'github']} /></a></p>
         </div>
       </div>
     </Router>
