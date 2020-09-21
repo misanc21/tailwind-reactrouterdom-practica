@@ -31,7 +31,7 @@ const Header = () => {
     }, [location])
 
     return ( 
-        <nav className="relative flex flex-wrap items-center justify-between px-2 py-1 navbar-expand-lg bg-green-500 mb-2">
+        <nav className="relative flex flex-wrap items-center justify-between px-2 py-1 navbar-expand-lg bg-red-500 w-screen">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link
@@ -74,7 +74,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="container flex flex-wrap justify-end mx-auto px-3">
+        <div className={"container flex-wrap justify-end mx-auto px-6" + (navbarOpen ? " hidden" : " flex")}>
             <ul className="flex  lg:flex-fow list-none">
                 {
                     locArray.map((l,i) =>{
@@ -84,7 +84,7 @@ const Header = () => {
                                 className="px-1 text-xs uppercase font-bold leading-snug text-white"
                                 to={direcciones[i]}
                             >
-                                / {l}
+                                / {l === ''? 'Home': l}
                             </Link>
                         </li>
                         )

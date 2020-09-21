@@ -4,4 +4,10 @@ const tailwindcss = require('tailwindcss');
          tailwindcss('./tailwind.js'),
          require('autoprefixer'),
      ],
+     theme: {
+        fontFamily: {
+            'roboto': ['Roboto', 'sans-serif']
+
+        }
+      }
  };
