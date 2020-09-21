@@ -28,6 +28,8 @@ const Header = () => {
 
     useEffect(()=>{
         setPath(location.pathname)
+        setNavbarOpen(false)
+        // eslint-disable-next-line
     }, [location])
 
     return ( 
