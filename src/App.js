@@ -10,8 +10,12 @@ import {
   Route
 } from "react-router-dom";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 
 function App() {
+  library.add( faBars)
   return (
     <Router>
       <Header />
